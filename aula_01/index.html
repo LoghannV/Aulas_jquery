@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        button{
+            color: black;
+            font-size: 14pt;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            width: 150px;
+            cursor: pointer;
+            padding: 15px;
+            transition: all .4s;
+        }
+        button:hover{
+            color: white;
+            background-color:black ;
+        }
+        .box{
+            margin: auto auto;
+            width: 70%;
+            height: 800px;
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+            transition: all .3s;
+        }
+        .box:hover{
+            box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        hr{
+            margin: 15px;
+            width: 80%;
+        }
+        input{
+            width: 40%;
+            padding: 10px;
+            font-size: 12pt;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        .label-box{
+            font-size: 14pt;
+        }
+        label,input{
+            margin-top: 30px;
+        }
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin: 10px;
+            font-size: 38pt;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    
+    <p style="visibility: hidden;">.</p>
+    <div class="box">
+        <h1 class="titulo">Aula 01</h1>
+         <div class="box-operacao">
+            <center>
+                <label for="FirstVal" class="label-box">Valor 1:</label>
+                <input type="text" name="FirstVal" id="FirstVal" placeholder="Digite o primeiro valor">
+                <br>
+                <label for="SecondVal" class="label-box">Valor 2:</label>
+                <input type="text" name="SecondVal" id="SecondVal" placeholder="Digite o segundo valor">
+                <br>
+                <hr>
+                <p style="text-align: center;" id="resultado">Resultado</p>
+                <button>Somar JQ</button>
+            </center>
+         </div>
+    </div>
+    
+</body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        const btn = $("button")
+        btn.click(()=>{
+            $("#resultado").html(parseInt($("#FirstVal").val())+parseInt($("#SecondVal").val()))
+        })
+   
+    </script>
+</html>
